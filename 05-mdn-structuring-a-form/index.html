@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="/test-handling-page" method="post">
+        <fieldset>
+            <legend>Fruit juice size</legend>
+            <ul>
+                <li>
+                    <input type="radio" name="size" id="size_1" value="small">
+                    <label for="size_1">Small</label>
+                </li>
+                <li>
+                    <input type="radio" name="size" id="size_2" value="medium">
+                    <label for="size_2">Medium</label>
+                </li>
+                <li>
+                    <input type="radio" name="size" id="size_3" value="large">
+                    <label for="size_3">Large</label>
+                </li>
+            </ul>
+        </fieldset>
+        <p>Required fields are followed by 
+            <span aria-label="Required">*</span>.
+        </p>
+        <div>
+            <label for="username">Name: <span aria-label="Required">*</span></label>
+            <input type="text" id="username" name="username" required />
+        </div>
+        <button type="submit">Submit your choice</button>
+    </form>
+
+    <form action="test-handling-page" method="post">
+        <h1>Payment form</h1>
+        <p>Required fields are followed by <span aria-label="Required">*</span>.</p>
+        <h2>Contact information</h2>
+        <fieldset>
+            <legend>Title</legend>
+                <ul id="title">
+                    <li>
+                        <input type="radio" name="title" id="king" value="king">
+                        <label for="king">King</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="title" id="queen" value="queen">
+                        <label for="queen">Queen</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="title" id="joker" value="joker">
+                        <label for="joker">Joker</label>
+                    </li>
+                </ul>
+        </fieldset>
+        <ul>
+            <li>
+                <label for="name" id="name-after-title">Name:
+                    <span aria-label="Required">*</span>
+                </label>
+                <input type="text" id="name" name="name" required>
+            </li>
+            <li>
+                <label for="email">Email: 
+                    <span aria-label="Required">*</span>
+                </label>
+                <input type="email" id="email" name="email" required>
+            </li>
+            <li>
+                <label for="password">Password: 
+                    <span aria-label="Required">*</span>
+                </label>
+                <input type="text" id="password" name="password" required>
+            </li>
+        </ul>
+        <h2>Payment information</h2>
+        <ul>
+            <li>
+                <label for="cardType">Card Type: </label>
+                <select name="cardType" id="cardType">
+                    <option value="visa">Visa</option>
+                    <option value="masterCard">MasterCard</option>
+                    <option value="amex">American Express</option>
+                </select>
+            </li>
+            <li>
+                <label for="cardNum">Card number: <span aria-label="Required">*</span></label>
+                <input type="number" id="cardNum" name="cardNum" required>
+            </li>
+            <li>
+                <label for="expireDate">Expiration Date: <span aria-label="Required">*</span></label>
+                <input type="month" id="expireDate" name="expireDate">
+            </li>
+            <li>
+                <button type="submit">Validate the payment</button>
+            </li>
+        </ul>
+    </form>
+
+</body>
+</html>
