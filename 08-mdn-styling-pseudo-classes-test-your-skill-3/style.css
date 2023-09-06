@@ -1,0 +1,95 @@
+* { 
+    box-sizing: border-box;
+    --left-pad: 1rem;
+}
+
+label, input, button {
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0; margin: 0;
+    display: block;
+    padding: 5px;
+    height: 30px;
+}
+
+fieldset {
+    position:relative;
+    width: 400px;
+    height: auto;
+}
+
+legend {
+    background-color: black;
+    color: #fff;
+    margin-left: var(--left-pad);
+    padding: 0.6rem;
+    font-size: 1.2rem;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: -1.2rem;
+    display: inline-block;
+}
+
+ul~li {
+    margin-top: 1rem;
+}
+
+li + li {
+    margin-top: 1rem;
+}
+
+li {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+li:last-of-type{
+    align-self: center;
+}
+
+label.required::after{
+    position: relative;
+    right: -180px;
+    font-size: 0.8rem;
+    background-color: #000;
+    color: #fff;
+    content: "Required";
+    padding: 0.2rem;
+}
+
+label:invalid{
+    position: relative;
+    right: ;
+    background-color: red;
+    color:#000;
+    content: "Invalid entry";
+    padding: 0.2rem;
+}
+
+
+
+input {
+    color: #000;
+    font-size: 1rem;
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 95%;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+input:invalid + span::before {
+    padding-left: 3px;
+    content: "✖";
+    color: red;
+  }
+  
+  input:valid + span::before {
+    padding-left: 3px;
+    content: "✓";
+    color: green;
+  }
