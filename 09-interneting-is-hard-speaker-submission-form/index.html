@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaker Submission</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="title">
+        <h1>Speaker Submission</h1>
+        <p>Want to speak at our fake conference? Fill out this form.</p>
+    </header>
+    <div class="speaker-form">
+        <form action="" method="post">
+            <ul>
+                <li class="form-row">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </li>
+                <li class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </li>
+                <li>
+                    <fieldset class="legacy-form-row">
+                        <legend>Type of Talk</legend>
+                        <input type="radio" id="Main_Stage" value="Main_Stage" name="type_of_talk">
+                        <label for="Main_Stage" class="radio-label">Main Stage</label>
+                        <input type="radio" id="Workshop" value="Workshop" name="type_of_talk">
+                        <label for="Workshop" class="radio-label">Workshop</label>
+                    </fieldset>
+                </li>
+                <li class="form-row">
+                    <label for="T-shirt-size">T-Shirt Size</label>
+                    <select name="T-shirt-size" id="T-shirt-size">
+                        <option value="S">Small</option>
+                        <option value="M">Medium</option>
+                        <option value="L">Large</option>
+                        <option value="XL">Extra Large</option>
+                    </select>
+                </li>
+                <li class="form-row">
+                    <label for="abstract">Abstract</label>
+                    <textarea name="abstract" id="abstract" cols="30" rows="10"></textarea>
+                    <div class="instructions">Describe your talk in 500 words or less</div>
+                </li>
+                <li class="form-row">
+                    <label for="availability" class="checkbox-label">
+                        <input type="checkbox" id="availability" name="availability" value="available">
+                        <span>I'm actually available the date of the talk</span>
+                    </label>
+                </li>
+                <li class="form-row">
+                    <button type="submit">Submit</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+</body>
+</html>
