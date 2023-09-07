@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Speaker Submission</h1>
+        <p>Want to speak at our fake conference? Fill out this form.</p>
+    </div>
+    <div class="form-container">
+        <form action="" method="post">
+            <ul>
+                <li class="form-row">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required>
+                </li>
+                <li class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </li>
+                <li class="form-row">
+                    <fieldset>
+                        <legend>Type of Talk</legend>
+                        <input type="radio" name="type-of-talk" id="main-stage" value="main-stage">
+                        <label for="main-stage">Main Stage</label>
+                        <input type="radio" name="type-of-talk" id="workshop" value="workshop">
+                        <label for="workshop">Workshop</label>
+                    </fieldset>
+                </li>
+                <li class="form-row">
+                    <label for="t-shirt-size">T-Shirt Size</label>
+                    <select name="t-shirt-size" id="t-shirt-size">
+                        <option value="XS">Extra Small</option>
+                        <option value="S">Small</option>
+                        <option value="M">Medium</option>
+                        <option value="L">Large</option>
+                    </select>
+                </li>
+                <li class="form-row">
+                    <label for="abstract">Abstract</label>
+                    <textarea name="abstract" id="abstract" name="abstract"></textarea>
+                    <span>Describe your talk in 500 words or less</span>
+                </li>
+                <li class="form-row">
+                    <input type="checkbox" name="availability" id="availability" value="available">
+                    <label for="availability">I'm actually available the date of the talk</label>
+                </li>
+                <li class="form-row">
+                    <button type="submit">Submit</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+</body>
+</html>
