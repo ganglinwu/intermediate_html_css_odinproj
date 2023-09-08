@@ -26,9 +26,9 @@
                     <fieldset>
                         <legend>Type of Talk</legend>
                         <input type="radio" name="type-of-talk" id="main-stage" value="main-stage">
-                        <label for="main-stage">Main Stage</label>
+                        <label for="main-stage" class="radio-label">Main Stage</label>
                         <input type="radio" name="type-of-talk" id="workshop" value="workshop">
-                        <label for="workshop">Workshop</label>
+                        <label for="workshop" class="radio-label">Workshop</label>
                     </fieldset>
                 </li>
                 <li class="form-row">
@@ -45,12 +45,14 @@
                     <textarea name="abstract" id="abstract" name="abstract"></textarea>
                     <span>Describe your talk in 500 words or less</span>
                 </li>
-                <li class="form-row">
+                <li class="form-checkbox-row">
                     <input type="checkbox" name="availability" id="availability" value="available">
-                    <label for="availability">I'm actually available the date of the talk</label>
+                    <label class="checkbox-label" for="availability">I'm actually available the date of the talk</label>
                 </li>
                 <li class="form-row">
-                    <button type="submit">Submit</button>
+                    <div id="button-container">
+                        <button type="submit">Submit</button>
+                    </div>
                 </li>
             </ul>
         </form>
