@@ -1,60 +1,64 @@
 body {
-    background-color: rgb(214, 212, 212) ;
-
-    min-width: 220px;
-
-    display: flex;
-    justify-content: center;
-}
-
-form {
-    background-color: #fff;
-
-    width: 220px;
-    padding: 7px
-}
-
-div {
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 220px;
-
-    font: 1rem sans-serif;
-
-    margin:0;
+    font: 1em sans-serif;
+    width: 200px;
     padding: 0;
+    margin : 0 auto;
+    background-color: rgb(211, 211, 211);
+}
+
+div * {
+    display: block;
+}
+
+form  {
+      background-color: #f5f6f7;
+      padding: 5px 10px;
+}
+
+
+
+  input[type=email]{
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 100%;
+    border: 1px solid #333;
+    margin: 1rem 0 0 0;
+
+    font-family: inherit;
+    font-size: 90%;
 
     box-sizing: border-box;
-}
+  }
 
-label {
-    position: relative;
-    width: 100%;
+  /* This is our style for the invalid fields */
+  input:invalid{
+    border-color: #900;
+    background-color: #FDD;
+  }
 
-    text-align: center;
-}
+  input:focus:invalid {
+    outline: none;
+  }
 
-label>span {
-    position:relative;
-    width: 100%;
 
-    margin-top: 1rem;
-    
-    text-align:center
-}
-
-input[type='email'] {
-    margin-top: 1rem;
+  /* This is the style of our error messages */
+  .error {
+    width  : 100%;
+    padding: 0;
     margin-bottom: 1rem;
 
-    border-radius: 3px;
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
 
-    padding-left: 10px;
-}
+    box-sizing: border-box;
+  }
+
+  .error.active {
+    padding: 0.3em;
+  }
 
 button {
     border: none;
@@ -71,3 +75,13 @@ button:hover {
 }
 
 
+@media only screen and (min-width:700px) {
+    body {
+        width: 700px;
+    }
+
+    div * {
+        display: flex;
+        flex-direction: column;
+    }
+}
