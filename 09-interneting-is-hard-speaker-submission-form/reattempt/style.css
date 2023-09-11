@@ -31,6 +31,17 @@ body {
     padding: 50px;
 }
 
+.form-container {
+    background-color: #f6f7f8;
+    border: 1px solid #d6d9dc;
+    border-radius: 3px;
+    
+    width: 80%;
+    margin: 40px 0;
+    padding: 50px;
+}
+
+
 h1 {
     font-size: 2rem;
 }
@@ -43,11 +54,133 @@ div.header > * { /* all children of div.header (NOT DESCENDANTS!)*/
     padding-bottom: 2rem;
 }
 
+fieldset {
+    border: none;
+}
 
+.form-row {
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.form-row input[type='text'],
+.form-row input[type='email'],
+.form-row select,
+.form-row textarea {
+    width: 100%;
+    font-size: 1rem;
+    padding: 7px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #d6d9dc;
+}
+
+.form-row label {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-row .radio-label,
+.form-row input[type='radio'] {
+    float: left;
+}
+
+.form-row .radio-label {
+    display: block;
+    font-size: 1rem;
+    padding: 0 20px 0 10px;
+}
+
+.form-row input[type='radio'] {
+    margin-top: 2px;
+}
+
+legend {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+textarea {
+    resize: none;
+    min-height: 200px;
+}
+
+textarea + span {
+    color: #999;
+}
+
+.form-row input[type='checkbox'] {
+    display:flex;
+}
+
+.form-checkbox-row {
+    margin-bottom: 2rem;
+}
+
+button {
+    width: 50%;
+
+    font-size: 1rem;
+    font-weight: bold;
+    
+    color: #fff;
+    background-color: #5995da;
+
+    border: none;
+    border-radius: 3px;
+
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+}
 
 @media only screen and (min-width:700px) {
     .header, 
     .form-container {
         width: 600px;
+    }
+    .form-row {
+        flex-direction: row;
+        align-items: flex-start; /* To avoid stretching */
+        margin-bottom: 20px;
+      }
+    .form-row input[type='text'],
+    .form-row input[type='email'],
+    .form-row select,
+    .form-row textarea {
+      width: 250px;
+      height: initial;
+    }
+
+    .form-row label {
+        text-align: right;
+        width: 120px;
+        padding-right: 20px;
+    }
+    
+    legend {
+        text-align: right;
+        width: 120px;
+        padding-right: 20px;
+        float: left;
+    }
+
+    span {
+        margin-left: 120px;
+    }
+
+    .form-checkbox-row {
+        margin-left: 120px;
+    }
+    
+    button {
+        margin-left: 120px;
     }
 }
