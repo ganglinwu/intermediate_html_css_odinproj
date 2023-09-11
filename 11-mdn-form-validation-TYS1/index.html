@@ -15,6 +15,11 @@
       * {
         box-sizing: border-box;
       }
+
+      input:invalid {
+        border-color: #900;
+        background-color: pink;
+      }
     </style>
   </head>
 
@@ -24,19 +29,19 @@
       <ul>
         <li>
           <label for="uname">User name:</label>
-          <input type="text" name="uname" id="uname">
+          <input type="text" name="uname" id="uname" required minlength="5" maxlength="20">
         </li>
         <li>
           <label for="email">Email address:</label>
-          <input type="text" name="email" id="email">
+          <input type="email" name="email" id="email" required>
         </li>
         <li>
           <label for="phone">Phone number:</label>
-          <input type="text" name="phone" id="phone">
+          <input type="number" name="phone" id="phone" required maxlength="15">
         </li>
         <li>
           <label for="comment">Comment:</label>
-          <textarea name="comment" id="comment">
+          <textarea name="comment" id="comment" maxlength="200">
           </textarea>
         </li>
         <li>
