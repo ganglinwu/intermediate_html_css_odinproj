@@ -7,7 +7,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="leftTHIRD">
+        <img id="splash" src="./pic/Screenshot_2016-03-19-11-59-48.png" alt="Splash pic">
+        <div class="logo-background">
+            <!-- <img id="logo" src="./pic/pentagon_logo_stack.png" alt="pentagon logo"> -->
+        </div>
+    </div>
+    <div class="right2THIRDS">
+        <p>This is not a real online service! You know you need something 
+            like this in your life to help you realize your deepest dreams.
+        Sign up <em>now</em> to get started</p>
+        <p>You <em>know</em> you want to.</p>
+        <form action="./" method="post">
+            <legend>Let's do this!</legend>
+            <div>
+                <label for="fname">First Name</label>
+                <input type="text" name="fname" id="fname" required placeholder="First Name, e.g. John, Weixiang">
+                <span class="help">Please enter your first name, e.g. John, Weixiang</span>
+            </div>
+            <div>
+                <label for="lname">Last Name</label>
+                <input type="text" name="lname" id="lname" required placeholder="Last Name or Surname, e.g. Smith, Tan">
+                <span class="help">Please enter your last name(surname), e.g. Smith, Tan</span>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" required placeholder="e.g. you@email.com">
+                <span class="help">Please enter your email, e.g. you@email.com</span>
+            </div>
+            <div>
+                <label for="tel">Phone Number</label>
+                <input type="text" name="tel" id="tel" pattern="[\d]{8}" placeholder="81237890">
+                <span class="help">Please enter your 8 digit phone number.</span>
+            </div>
+            <div>
+                <label for="pw1">Password</label>
+                <input type="text" name="pw1" id="pw1">
+            </div>
+            <div>
+                <label for="pw2">Confirm Password</label>
+                <input type="text" name="pw2" id="pw2">
+            </div>
+        </form>
+        <!-- button outside form -->
+        <button type="submit">Create Account</button>
+        <span>Already have an account?</span> <a href="">Log in</a>
+    </div>
 </body>
 <script src="script.js"></script>
 </html>

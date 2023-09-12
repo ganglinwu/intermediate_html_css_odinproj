@@ -1,5 +1,5 @@
-const pw1 = document.querySelector('')
-const pw2 = document.querySelector('')
+const pw1 = document.querySelector('#pw1')
+const pw2 = document.querySelector('#pw2')
 const form = document.querySelector('form')
 
 

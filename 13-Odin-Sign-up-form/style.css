@@ -1,5 +1,69 @@
+@font-face {
+    font-family: hanken;
+    src: './fonts/Hanken-Boot.ttf';
+}
+@font-face {
+    font-family: goemetrysoftpro;
+    src: './fonts/Geometry_Soft_Pro-Bold_N.ttf' ;
+}
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+    display: flex;
+    flex-wrap: nowrap;
+
+    font-family: hanken, sans-serif;
+    font-size: 16px;
+}
+
+#splash {
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
+
+
+div.leftTHIRD {
+    width: 33vw;
+    z-index: 1;
+}
+
+div.right2THIRDS {
+    width: 67vw;
+    background-color: #efeff9;
+    z-index: 2;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: #fff;
+    padding-top: 1.5rem;
+    padding-left: 3rem;
+    padding-bottom: 2rem;
+
+    box-shadow: 0 8px 10px -2px rgb(200, 199, 199);
+}
+
+legend {
+    font-size: 2rem;
+    width: 67vw;
+    margin-bottom: 2rem;
+}
+
+form div {
+    width: 30vw;
+    display: block;
+}
+
+.help {
+    display: none;
+}
+
+.invalid .help {
+    display: block;
 }
