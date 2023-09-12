@@ -31,10 +31,12 @@
 
   <body>
     <form>
-      <label for="mail">I would like you to provide me with an e-mail address:</label>
-      <input type="email" id="mail" name="mail" required minlength="10">
-      <span class="error"></span>
-      <button>Submit</button>
+      <div>
+        <label for="mail">I would like you to provide me with an e-mail address:</label>
+        <input type="email" id="mail" name="mail" required minlength="10">
+        <span class="error"></span>
+        <button>Submit</button>
+      </div>
     </form>
   </body>
   <script>
@@ -90,7 +92,7 @@ function showError() {
     }
 }
 
-function validateForm(e) {
+function validateForm(e) { 
   const form = e.target;
 
   if (form.checkValidity()) {
@@ -107,6 +109,9 @@ function validateForm(e) {
     });
   }
 };
+// this would be very useful if every group of input and labels was nested in their respective p/div/li
+// by adding the invalid class to these containers, we could use CSS to highlight the invalid fields
+
   </script>
 
 </html>
