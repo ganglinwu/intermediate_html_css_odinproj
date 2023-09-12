@@ -40,18 +40,20 @@
   <script>
     const form = document.querySelector('form');
     const emailInput = document.getElementById('mail');
-    const errorMsg = document.querySelector('#mail + span.error');
+    const errorMsg = document.querySelector('#gmail + span.error');
 
-    form.addEventListener("submit", (e)=> {
-        if (!emailInput.validity.valid) {
-            // if emailInput is invalid
-            showError(); 
-            // show the error message
-            e.preventDefault();
-            // prevent form submission
-        }
-        // else submit form
-    });
+    form.addEventListener('submit', validateForm);
+
+    // form.addEventListener("submit", (e)=> {
+    //     if (!emailInput.validity.valid) {
+    //         // if emailInput is invalid
+    //         showError(); 
+    //         // show the error message
+    //         e.preventDefault();
+    //         // prevent form submission
+    //     }
+    //     // else submit form
+    // });
 
     emailInput.addEventListener('input', (e)=>{
         if (emailInput.validity.valid) {
@@ -87,6 +89,24 @@ function showError() {
         // set styling
     }
 }
+
+function validateForm(e) {
+  const form = e.target;
+
+  if (form.checkValidity()) {
+
+  } else {
+    e.preventDefault();
+    Array.from(form.elements).forEach(i => {
+      if (i.checkValidity()) {
+        i.parentElement.classList.remove('invalid');
+      } else {
+        i.parentElement.classList.add('invalid');
+      }
+
+    });
+  }
+};
   </script>
 
 </html>
