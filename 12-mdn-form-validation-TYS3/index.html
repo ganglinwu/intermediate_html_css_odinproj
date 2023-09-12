@@ -18,31 +18,55 @@
         box-sizing: border-box;
       }
 
+      div, button {
+        margin-top: 1rem;
+      }
+
       input {
         width: 100%;
       }
 
-      input + span {
-        background-color: #900;
-        color: #fff;
+      .help{
+        display: none;
+      }
+
+      .invalid .help {
+        display: block;
+      }
+
+      .invalid label,
+      .invalid input,
+      .invalid .help {
+        color: #900;
+        border-color: #900;
       }
     </style>
   </head>
 
   <body>
-    <form>
+    <form novalidate>
       <div>
-        <label for="mail">I would like you to provide me with an e-mail address:</label>
-        <input type="email" id="mail" name="mail" required minlength="10">
-        <span class="error"></span>
-        <button>Submit</button>
+        <label for="name">name</label>
+        <input type="text" name="name" id="name" required>
+        <span class="help">Please enter your name.</span>
       </div>
+      <div>
+        <label for="mail">email</label>
+        <input type="email" id="mail" name="mail" required>
+        <span class="help">Please enter your email.</span>
+      </div>
+      <div>
+        <label for="tel">telephone</label>
+        <input type="text" id="tel" name="tel" required pattern="[\d]{8}">
+        <spa class="help">Please enter your 8 digit telephone number.</span>
+      </div>
+      <button>Submit</button>
     </form>
   </body>
   <script>
     const form = document.querySelector('form');
     const emailInput = document.getElementById('mail');
-    const errorMsg = document.querySelector('#gmail + span.error');
+    const errorMsg = document.querySelector('#mail + span.error');
 
     form.addEventListener('submit', validateForm);
 
@@ -57,19 +81,19 @@
     //     // else submit form
     // });
 
-    emailInput.addEventListener('input', (e)=>{
-        if (emailInput.validity.valid) {
-            // if emailInput is valid
+//     emailInput.addEventListener('input', (e)=>{
+//         if (emailInput.validity.valid) {
+//             // if emailInput is valid
             
-            errorMsg.textContent = ""
-            // clear error message
+//             errorMsg.textContent = ""
+//             // clear error message
             
-            errorMsg.className = 'error'
-            // reset visual state of message
-        } else {
-            showError();
-        }
-});
+//             errorMsg.className = 'error'
+//             // reset visual state of message
+//         } else {
+//             showError();
+//         }
+// });
 
 
 function showError() {
