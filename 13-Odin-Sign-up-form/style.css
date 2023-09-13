@@ -120,13 +120,16 @@ form input:focus {
     padding-left: 0.5rem;
 }
 
-.help {
+.help,
+.empty_pw {
     display: none;
 
     font-size: 0.rem;
 }
 
-.invalid .help {
+
+.invalid .help,
+.empty .empty_pw {
     display: block;
     width: 80%;
     min-width: 150px;
@@ -134,7 +137,8 @@ form input:focus {
 
 .invalid label,
 .invalid input,
-.invalid .help {
+.invalid .help,
+.empty .empty_pw {
     color: #900;
 }
 
