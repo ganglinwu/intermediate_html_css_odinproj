@@ -11,59 +11,185 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    width: 100vw;
+    height: 100vh;
     
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: center;
 
     font-family: hanken, sans-serif;
     font-size: 16px;
+
+    background-color: #000;
 }
 
 #splash {
+    width: 500px;
+    height: 100%;
+
     object-fit: cover;
-    object-position: center;
+    object-position: -3cm;
     overflow: hidden;
 }
 
 
 div.leftTHIRD {
-    width: 33vw;
-    z-index: 1;
+    width: 500px;
+    min-width: 200px;
 }
 
 div.right2THIRDS {
-    width: 67vw;
-    background-color: #efeff9;
-    z-index: 2;
+    width: 1000px;
+    min-width: 400px;
+
+    background-color: #59d9ff;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p {
+    font-size: 1.5rem;
+    padding-left: 4rem;
+
+    color: #177eb8;
+
+    line-height: 1.3;
 }
 
 form {
     display: flex;
     flex-wrap: wrap;
 
-    background-color: #fff;
+    margin-top: 3rem;
+
+    background-color: #177eb8;
     padding-top: 1.5rem;
-    padding-left: 3rem;
+    padding-left: 4rem;
     padding-bottom: 2rem;
 
-    box-shadow: 0 8px 10px -2px rgb(200, 199, 199);
+    color: #ffbf0d;
+
+    box-shadow: 0 3px 10px -2px #ffbf0d;
 }
 
 legend {
-    font-size: 2rem;
+    font-size: 1.5rem;
     width: 67vw;
     margin-bottom: 2rem;
 }
 
 form div {
-    width: 30vw;
-    display: block;
+    width: 40%;
+    min-width: 160px;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 1.5rem;
+}
+
+form input {
+    margin-right: 5rem;
+    margin-bottom: 0.4rem;
+
+    height: 2rem;
+    font-size: 1.2rem;
+    color: #177eb8;
+
+    border-radius: 5px;
+    border: 1px solid #efeff9;
+}
+
+form input:focus {
+    outline: 1px solid #177eb8;
+    background-color: #f5e9c8;
+}
+
+.incorrect {
+    background-color: pink;
+}
+
+::placeholder {
+    color: #177eb8;
+    font-family: hanken, sans-serif;
+
+    padding-left: 0.5rem;
 }
 
 .help {
     display: none;
+
+    font-size: 0.rem;
 }
 
 .invalid .help {
     display: block;
+    width: 80%;
+    min-width: 150px;
+}
+
+.invalid label,
+.invalid input,
+.invalid .help {
+    color: #900;
+}
+
+div.invalid input {
+    background-color: pink;
+}
+
+input:valid {
+    background-color: #ffbf0d;
+}
+
+button {
+    margin-top: 3rem;
+    margin-left: 4rem;
+
+    font-size: 1.2rem;
+    font-family: hanken, sans-serif;
+
+    width: 280px;
+
+    padding: 1.2rem;
+
+    border: 2px solid #177eb8;
+    border-radius: 10px;
+
+    color: #177eb8;
+    background-color: #59d9ff;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #177eb8 ;
+    color: #ffbf0d;
+}
+
+button + div {
+    margin-top: 3rem;
+
+    padding-left: 4rem;
+    font-size: 1.2rem;
+}
+
+a {
+    font-weight: bold;
+    color: #177eb8;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffbf0d;
 }
