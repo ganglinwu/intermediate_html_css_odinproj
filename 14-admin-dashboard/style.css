@@ -1,0 +1,441 @@
+@font-face {
+    font-family: "Hanken";
+    src: url(./fonts/Hanken-Book.ttf);
+}
+
+@font-face {
+    font-family: "Geometry Soft Pro";
+    src: url(./fonts/Geometry_Soft_Pro-Bold_N.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --dark-blue: #177eb8;
+    --light-blue: #59d9ff;
+    --yellow: #ffbf0d;
+    --dark-grey: #707c8b;
+
+    --sidebar-left-pad: 20px;
+    --top-pad: 20px;
+}
+
+.container {
+    height: 100vh;
+
+    font-family: 'Hanken', sans-serif;
+
+    display: grid;
+
+    grid-template-columns: minmax(200px, 300px) 1fr;
+    grid-template-rows: minmax(150px, 200px) 1fr;
+
+}
+
+
+/* -------------------------------------------- */
+/* ---------- Begin CSS for side bar ---------- */
+/* -------------------------------------------- */
+
+#sidebar {
+    grid-row: 1/-1;
+    grid-column: 1/2;
+
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    background-color: var(--dark-blue);
+    color: #fff;
+
+    padding-left: var(--sidebar-left-pad);
+    padding-top: var(--top-pad);
+
+    /* temporary values */
+}
+
+.logo {
+    display: grid;
+    
+    grid-template-columns: 20% 1fr;
+    align-items: center;
+}
+
+.logosvg {
+    margin-right: 1rem;
+
+    justify-self: center;
+
+    height: 50px;
+    width: 50px;
+
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+
+    cursor: pointer;
+}
+
+h2 {
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.nav > ul {
+    display: grid;
+    grid-auto-flow: row;
+
+    align-items: center;
+}
+
+.svg {
+    margin-right: 1rem;
+
+    height: 20px;
+    width: 20px;
+
+    justify-self: center;
+
+    /* turns svg white */
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+
+    cursor: pointer;
+}
+
+li {
+    display: grid;
+
+    grid-template-columns: 20% 1fr;
+    align-items: center;
+
+    margin-bottom: 1rem;
+}
+
+img.svg + p {
+    font-size: 1.2rem;
+
+    cursor: pointer;
+}
+
+/* ------------------------------------------ */
+/* ---------- Begin CSS for header ---------- */
+/* ------------------------------------------ */
+
+#header {
+    grid-row: 1/2;
+    grid-column: 2/-1;
+
+    background-color: #fff;
+
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: 1fr 2fr;
+    /* temporary values */
+}
+
+.head.top {
+
+    padding-left: 40px;
+    padding-top: 10px;
+
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+
+    /* temporary values */
+}
+
+.search {
+    display: flex;
+
+    align-items: center;
+}
+
+.head .svg {
+    margin-right: 1rem;
+
+    height: 26px;
+    width: 26px;
+
+    justify-self: left;
+
+    /* turns svg black */
+    filter: invert(0%) sepia(16%) saturate(7485%) hue-rotate(25deg) brightness(105%) contrast(100%);
+
+    cursor: pointer;
+}
+
+img.svg+input {
+    margin: 0;
+    padding: 0;
+
+    /* take up as much space as possible */
+    flex:1; 
+
+    font-size: 1.2rem;
+
+    border-radius: 15px;
+
+    background-color: #f5f6f7;
+}
+
+.head.top-right {
+    display: flex;
+
+    justify-content: right;
+    align-items: center;
+    
+    font-size: 20px;
+    margin-right: 5rem;
+}
+
+.userIcon {
+    height: 26px;
+    width: 26px;
+
+    border-radius: 50%;
+
+    margin-left: 1.5rem;
+
+    cursor: pointer;
+}
+
+.head.top-right p{
+    margin-left: 1.5rem;
+
+    cursor: pointer;
+}
+
+.head.bottom {
+
+    padding-left: 40px;
+    padding-top: 10px;
+
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.head.bottom-left{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.userIconBig {
+    height: 65px;
+    width: 65px;
+
+    grid-row: 1/-1;
+    grid-column: 1/2;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.userIconBig+p {
+
+    font-size: 0.8rem;
+
+    grid-row: 1/2;
+    grid-column: 2/-1;
+}
+
+p+h2 {
+    grid-row: 2/-1;
+    grid-column: 2/-1;
+}
+
+.head.bottom-right {
+    display: grid;
+
+    grid-template-columns: repeat(3,minmax(50px, 1fr));
+    column-gap: 4rem;
+
+    justify-content: space-between;
+
+    margin-right: 5rem;
+}
+
+button {
+    padding: 10px 5px;
+
+    border: 2px solid var(--dark-blue);
+    border-radius: 25px;
+
+    background-color: var(--dark-blue);
+    color: #fff;
+
+    font-family: 'hanken', sans-serif;
+    font-size: 1rem;
+
+    cursor: pointer;
+}
+
+button:hover {
+    border: 2px solid var(--dark-blue);
+
+    color: var(--dark-blue);
+    background-color: #fff;
+}
+
+/* ----------------------------------------------------- */
+/* ---------- Begin CSS for main display area ---------- */
+/* ----------------------------------------------------- */
+
+#main {
+    grid-row: 2/-1;
+    grid-column: 2/-1;
+    background-color: #d7d9db;
+}
+
+.mainContent{
+
+    display: grid;
+    grid-template-columns: 3fr minmax(300px, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+.mainHeader {
+    height: auto;
+    margin-left: 20px;
+
+    font-size: 18px;
+
+    display: grid;
+    grid-template-columns: 3fr minmax(300px, 1fr);
+    gap: 30px;
+}
+
+.project {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(autofill, 200px);
+
+    gap: 30px;
+
+    margin-left: var(--sidebar-left-pad);
+    margin-bottom: 4rem;
+
+}
+
+.project>h3 {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+
+    /* to override grid gap */
+    margin-bottom: -40px;
+    align-self: center;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 10px 1fr;
+}
+
+.ribbon {
+    background-color: var(--yellow);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    grid-column: 1/2;
+}
+
+.contents {
+    grid-column: 2/-1;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #fff;
+
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 30px 20px;
+}
+
+.card>h3 {
+    align-self: left;
+    margin-bottom: 5px;
+}
+
+
+h3+p {
+    justify-self: left;
+
+    color: #8e8f90;
+
+    flex: 1;
+}
+
+.quicklinks {
+    display: flex;
+    justify-content: right;
+}
+
+.project img.svg {
+    margin-right: 1rem;
+
+    height: 26px;
+    width: 26px;
+
+    justify-self: left;
+
+    /* turns svg black */
+    filter: invert(0%) sepia(16%) saturate(7485%) hue-rotate(25deg) brightness(105%) contrast(100%);
+
+    cursor: pointer; 
+}
+
+.announcement {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+
+    margin: 0 30px;
+}
+
+.announcement>h3 {
+
+    /* to override grid gap */
+    margin-bottom: -40px;
+    align-self: center;
+}
+
+.announcementContents {
+    background-color: #fff;
+
+    padding: 40px 30px;
+
+    border-radius: 10px;
+}
+
+.announcementContents>p {
+    color: #8e8f90;
+}
+
+.announcementContents>hr {
+    margin: 20px 0;
+}
+
+.trending {
+    grid-column: 2/-1;
+    grid-row: 2/-1;
+
+    margin: 15px 30px;
+
+    /* temporary values */
+    border: 1px solid blue;
+    margin-bottom: 4rem;
+}
