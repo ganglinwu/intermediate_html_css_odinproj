@@ -303,7 +303,7 @@ button:hover {
     display: grid;
     grid-template-columns: 1fr 300px;
     
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1rem 1fr;
 }
 
 .mainHeader {
@@ -427,13 +427,38 @@ h3+p {
     margin: 20px 0;
 }
 
+.trending_title {
+    grid-column: 2/-1;
+    grid-row: 2/3;
+
+    margin: 0 30px;
+
+    font-size:18px;
+}
+
 .trending {
     grid-column: 2/-1;
-    grid-row: 2/-1;
+    grid-row: 3/-1;
 
     margin: 15px 30px;
 
     /* temporary values */
     border: 1px solid blue;
     margin-bottom: 4rem;
+}
+
+.trendingContents {
+    background-color: #fff;
+
+    padding: 40px 30px;
+
+    border-radius: 10px;
+}
+
+.trendingContents>p {
+    color: #8e8f90;
+}
+
+.trendingContents>hr {
+    margin: 20px 0;
 }
