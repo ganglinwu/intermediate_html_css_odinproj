@@ -90,6 +90,8 @@ ul {
     grid-template-rows: repeat(6, 1fr);
 
     align-items: center;
+
+    transition: all 1.5s ease-in-out;
 }
 
 .svg {
@@ -169,6 +171,8 @@ img.svg + p {
     height: 26px;
     width: 26px;
 
+    border-radius: 50%;
+
     justify-self: left;
 
     /* turns svg black */
@@ -177,18 +181,29 @@ img.svg + p {
     cursor: pointer;
 }
 
+.head .svg:hover{
+    background-color: #858585;
+}
+
 img.svg+input {
     margin: 0;
-    padding: 0;
+    padding-left: 10px;
 
     /* take up as much space as possible */
     flex:1; 
 
-    font-size: 1.2rem;
+    font-size: 1rem;
 
     border-radius: 15px;
 
     background-color: #f5f6f7;
+
+    transition: all 0.1s ease-in;
+}
+
+img.svg+input:focus {
+    background-color: var(--yellow);
+    color: var(--dark-blue);
 }
 
 .head.top-right {
@@ -199,6 +214,8 @@ img.svg+input {
     
     font-size: 20px;
     margin-right: 5rem;
+
+    transition: all 0.5s ease-in-out;
 }
 
 .userIcon {
@@ -275,6 +292,8 @@ p+h2 {
     justify-content: space-between;
 
     margin-right: 5rem;
+
+    transition: all 0.75s ease-in-out;
 }
 
 button {
@@ -448,11 +467,20 @@ h3+p {
 
 
 .announcementContents {
-    background-color: #fff;
+    background: linear-gradient(to top, #fff 50%, var(--dark-blue) 50%) bottom;
+    background-size: 100% 200%;
 
     padding: 40px 30px;
 
     border-radius: 10px;
+
+    transition: all 1s ease-in-out;
+}
+
+.announcementContents:hover {
+    background-position: top;
+
+    color: var(--yellow);
 }
 
 .announcementContents>p {
